@@ -42,6 +42,29 @@ class ViewController: UITableViewController {
             fatalError(error.localizedDescription)
         }
     }
+    
+    @IBAction func AddButtonPressed(_ sender: Any) {
+        let alertController = UIAlertController(title: "Nouvelle Tâche", message: "Ajouter une tâche à la liste", preferredStyle: .alert)
+        
+        alertController.addTextField { (textField) in
+            textField.placeholder = "Description..."
+        }
+        
+        let cancelButton = UIAlertAction(title : "Annuler",style: .cancel,handler: nil)
+        let saveButton = UIAlertAction(title: "Ajouter", style: .default){_ in
+            guard let textField = alertController.textFields?.first else{
+                return
+            }
+            self.createTache(title: textField.text!)
+            self.taches = self.fetchTache()
+            self.tableView.reloadData()
+        }
+        alertController.addAction(saveButton)
+        alertController.addAction(cancelButton)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    
         private func createTache (title: String, date : Date = Date()){
             let tache = Tache(context: managedContext)
             
