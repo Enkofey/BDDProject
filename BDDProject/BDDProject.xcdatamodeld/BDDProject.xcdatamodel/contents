@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Categorie" representedClassName="Categorie" syncable="YES" codeGenerationType="class">
-        <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="majDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="nom" optional="YES" attributeType="String"/>
     </entity>
-    <entity name="Image" representedClassName="Image" syncable="YES" codeGenerationType="class">
-        <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="data" optional="YES" attributeType="Binary"/>
-        <attribute name="majDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    <entity name="ImagePhoto" representedClassName="ImagePhoto" syncable="YES" codeGenerationType="class">
+        <attribute name="donnee" optional="YES" attributeType="Binary"/>
     </entity>
     <entity name="Tache" representedClassName="Tache" syncable="YES" codeGenerationType="class">
         <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -17,11 +13,11 @@
         <attribute name="majDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="title" optional="YES" attributeType="String"/>
         <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Categorie"/>
-        <relationship name="image" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Image"/>
+        <relationship name="imagePhoto" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ImagePhoto"/>
     </entity>
     <elements>
+        <element name="Categorie" positionX="-222.09765625" positionY="-222.38671875" width="128" height="58"/>
+        <element name="ImagePhoto" positionX="-374.08984375" positionY="-259.3359375" width="128" height="58"/>
         <element name="Tache" positionX="-479.24609375" positionY="-148.1953125" width="128" height="148"/>
-        <element name="Image" positionX="-212.171875" positionY="150.78515625" width="128" height="88"/>
-        <element name="Categorie" positionX="-222.09765625" positionY="-222.38671875" width="128" height="88"/>
     </elements>
 </model>

@@ -16,6 +16,10 @@
 		F934B39125E64529002C76C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F934B38F25E64529002C76C3 /* LaunchScreen.storyboard */; };
 		F934B39C25E64529002C76C3 /* BDDProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F934B39B25E64529002C76C3 /* BDDProjectTests.swift */; };
 		F934B3A725E64529002C76C3 /* BDDProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F934B3A625E64529002C76C3 /* BDDProjectUITests.swift */; };
+		F9918C0F2656FE8B00187A53 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9918C0E2656FE8B00187A53 /* CreateViewController.swift */; };
+		F999DFC325EF7A00003CBF71 /* EditTacheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F999DFC225EF7A00003CBF71 /* EditTacheViewController.swift */; };
+		F999DFCB25EF7B88003CBF71 /* DetailTacheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F999DFCA25EF7B88003CBF71 /* DetailTacheViewController.swift */; };
+		F999DFD625EF7EE2003CBF71 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F999DFD525EF7EE2003CBF71 /* SegueHandlerType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		F934B3A225E64529002C76C3 /* BDDProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BDDProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F934B3A625E64529002C76C3 /* BDDProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDDProjectUITests.swift; sourceTree = "<group>"; };
 		F934B3A825E64529002C76C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9918C0E2656FE8B00187A53 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		F999DFC225EF7A00003CBF71 /* EditTacheViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTacheViewController.swift; sourceTree = "<group>"; };
+		F999DFCA25EF7B88003CBF71 /* DetailTacheViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTacheViewController.swift; sourceTree = "<group>"; };
+		F999DFD525EF7EE2003CBF71 /* SegueHandlerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +109,9 @@
 		F934B38025E64524002C76C3 /* BDDProject */ = {
 			isa = PBXGroup;
 			children = (
-				F934B38125E64524002C76C3 /* AppDelegate.swift */,
-				F934B38325E64524002C76C3 /* SceneDelegate.swift */,
-				F934B38525E64524002C76C3 /* ViewController.swift */,
-				F934B38725E64524002C76C3 /* Main.storyboard */,
+				F999DFD025EF7C77003CBF71 /* View */,
+				F999DFCF25EF7C3D003CBF71 /* Controller */,
+				F999DFD125EF7C91003CBF71 /* Model */,
 				F934B38D25E64529002C76C3 /* Assets.xcassets */,
 				F934B38F25E64529002C76C3 /* LaunchScreen.storyboard */,
 				F934B39225E64529002C76C3 /* Info.plist */,
@@ -129,6 +136,35 @@
 				F934B3A825E64529002C76C3 /* Info.plist */,
 			);
 			path = BDDProjectUITests;
+			sourceTree = "<group>";
+		};
+		F999DFCF25EF7C3D003CBF71 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F999DFCA25EF7B88003CBF71 /* DetailTacheViewController.swift */,
+				F999DFC225EF7A00003CBF71 /* EditTacheViewController.swift */,
+				F934B38525E64524002C76C3 /* ViewController.swift */,
+				F9918C0E2656FE8B00187A53 /* CreateViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F999DFD025EF7C77003CBF71 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F934B38725E64524002C76C3 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F999DFD125EF7C91003CBF71 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F934B38325E64524002C76C3 /* SceneDelegate.swift */,
+				F934B38125E64524002C76C3 /* AppDelegate.swift */,
+				F999DFD525EF7EE2003CBF71 /* SegueHandlerType.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,10 +297,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9918C0F2656FE8B00187A53 /* CreateViewController.swift in Sources */,
+				F999DFC325EF7A00003CBF71 /* EditTacheViewController.swift in Sources */,
+				F999DFCB25EF7B88003CBF71 /* DetailTacheViewController.swift in Sources */,
 				F934B38C25E64524002C76C3 /* BDDProject.xcdatamodeld in Sources */,
 				F934B38625E64524002C76C3 /* ViewController.swift in Sources */,
 				F934B38225E64524002C76C3 /* AppDelegate.swift in Sources */,
 				F934B38425E64524002C76C3 /* SceneDelegate.swift in Sources */,
+				F999DFD625EF7EE2003CBF71 /* SegueHandlerType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
